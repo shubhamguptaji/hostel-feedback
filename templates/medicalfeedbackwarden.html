@@ -1,0 +1,22 @@
+{% include "main.html" %}
+</head>
+<body style="background-color: black; color: white;">
+	{% include "headerwarden.html" %}
+	<div class="row">
+		<div class="col-md-12" style="margin-top: 80px;text-align: center;">
+			<h1>
+				Medical Facilities Feedback
+			</h1>
+		</div>
+	</div>
+    <div>
+        <span style="margin-left: 25%;font-size: 25px;">
+            View comments
+        </span>
+    </div>
+    <div>
+        <a href="{{url_for('commentswarden', categories_id=category.id, feedback_id=5)}}"><button type="submit" class="btn btn-primary" style="margin-left: 47%; margin-right: 50%;">Comment</button></a>
+    </div>
+</body>
+</html>
+    

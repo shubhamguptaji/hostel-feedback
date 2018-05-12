@@ -1,0 +1,46 @@
+{% include "main.html" %}
+</head>
+<body style="background-color: black; color: white;">
+	{% include "header.html" %}
+	<div class="row">
+		<div class="col-md-12" style="margin-top: 80px;text-align: center;">
+			<h1>
+				{{category.name}}
+			</h1>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8" style="text-align: center;">
+			<h2>Comments</h2>
+		</div5
+	</div>
+	<div class="row">
+		<div class="col-md-9">
+			
+		</div>
+	</div>
+	<div class="row">
+	{% for i in comments %}
+		<div class="col-md-11 hello">
+			<div style="text-align: center; background-color: cyan; margin-right: 25%; margin-left: 25%; margin-bottom: 10px; margin-top: 10px; padding: 10px 10px 10px 10px; color: black;">
+				{{ i.commentdata }}	
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+	<div class="row">
+		<form action="#" method="POST">
+			<div class="col-md-3" style="text-align: right; margin-top: 50px;font-size: 35px;">Comment:</div>
+			<div class="col-md-9" style="color: black; margin-top: 30px;">
+				<input type="text" align="center" name="commentdata" placeholder="Comment here..." required>
+				<button type="submit" style="color: black; margin-top: 25px; height: 50px; width: 100px;">Post</button>
+			</div>
+		</form>
+	</div>
+	<script src="{{url_for('static', filename='jquery.min.js')}}">
+    </script> 
+    <script src="{{url_for('static', filename='bootstrap.min.js')}}">
+    </script>
+</body>
+</html>

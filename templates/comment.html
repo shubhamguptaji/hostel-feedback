@@ -1,0 +1,43 @@
+{% include "main.html" %}
+</head>
+<body>
+	{% include "header.html" %}
+	<div class="row">
+		<div class="col-md-12" style="margin-top: 80px;text-align: center;">
+			<h1>
+				{{category.name}}
+			</h1>
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8" style="text-align: center;">
+			<h2>Comments</h2>
+		</div5
+	</div>
+	<div class="row">
+		<div class="col-md-9">
+			
+		</div>
+	</div>
+	<div class="row">
+	{% for i in comments %}
+		<div class="col-md-11 hello">
+			<div class="myWell">
+				{{ i.commentdata }}	
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+	<div class="row">
+		<form action="#" method="POST">
+			<div class="col-md-6" style="text-align: right;text-align: right; margin-top: 50px;font-size: 35px;">Comment:</div>
+			<div class="col-md-6" style="color: black; margin-top: 30px;">
+				<input type="text" align="center" name="commentdata" placeholder="Comment here..." required>
+				<button type="submit" style="color: black; margin-top: 35px;">Post</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+{% include "main.html" %}
+</head>
+<body style="background-color: black; color: white;">
+	{% include "header.html" %}
+	<div class="row">
+		<div class="col-md-12" style="margin-top: 80px;text-align: center;">
+			<h1>
+				Hostel Facilities Feedback
+			</h1>
+		</div>
+	</div>
+	<div class="hello">
+		<table>
+       		<form method="post" action="{{url_for('someview', categories_id=category.id, feedback_id=2)}}">
+            	<tr>
+                	<td></td>
+                	<td>Excellent</td>
+                	<td>Very Good</td>
+                	<td>Good</td>
+               	 	<td>Average</td>
+                	<td>Poor</td>
+            	</tr>
+            	<tr>
+            	    <td style="text-align: left;">1. Room</td>
+            	    <td><input type="radio" name="mess1" value="5" /></td>
+            	    <td><input type="radio" name="mess1" value="4" /></td>
+            	    <td><input type="radio" name="mess1" value="3" /></td>
+            	    <td><input type="radio" name="mess1" value="2" /></td>
+                	<td><input type="radio" name="mess1" value="1" /></td>
+            	</tr>
+            	<tr>
+                	<td style="text-align: left;">2. Corridors</td>
+                	<td><input type="radio" name="mess2" value="5" /></td>
+                	<td><input type="radio" name="mess2" value="4" /></td>
+                	<td><input type="radio" name="mess2" value="3" /></td>
+                	<td><input type="radio" name="mess2" value="2" /></td>
+                	<td><input type="radio" name="mess2" value="1" /></td>
+            	</tr>
+            	<tr>
+	                <td style="text-align: left;">3. Toilets</td>
+    	            <td><input type="radio" name="mess3" value="5" /></td>
+        	        <td><input type="radio" name="mess3" value="4" /></td>
+            	    <td><input type="radio" name="mess3" value="3" /></td>
+                	<td><input type="radio" name="mess3" value="2" /></td>
+                	<td><input type="radio" name="mess3" value="1" /></td>
+            	</tr>
+            	<tr>
+	                <td style="text-align: left;">4. Common Room</td>
+                	<td><input type="radio" name="mess4" value="5" /></td>
+	                <td><input type="radio" name="mess4" value="4" /></td>
+    	            <td><input type="radio" name="mess4" value="3" /></td>
+        	        <td><input type="radio" name="mess4" value="2" /></td>
+            	    <td><input type="radio" name="mess4" value="1" /></td>
+            	</tr>
+            	<tr>
+	                <td style="text-align: left;">5. Hostel Surroundings(e.g. lawns,etc)</td>
+    	            <td><input type="radio" name="mess5" value="5" /></td>
+        	        <td><input type="radio" name="mess5" value="4" /></td>
+            	    <td><input type="radio" name="mess5" value="3" /></td>
+                	<td><input type="radio" name="mess5" value="2" /></td>
+                	<td><input type="radio" name="mess5" value="1" /></td>
+            	</tr>
+            	<tr>
+            		<td></td>
+            		<td></td>
+            		<td><button type="submit" class="btn btn-lg btn-success">Submit</button></td>
+            	</tr>
+        	</form>
+    	</table>
+    </div>
+    <div>
+        <span style="margin-left: 25%;font-size: 25px;">
+            If you are having any other issues kindly mention them in the comments section below.
+        </span>
+    </div>
+    <div>
+        <a href="{{url_for('comments', categories_id=category.id, feedback_id=2)}}"><button type="submit" class="btn btn-primary" style="margin-left: 47%; margin-right: 50%;">Comment</button></a>
+    </div>
+</body>
+</html>
+    

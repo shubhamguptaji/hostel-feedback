@@ -1,0 +1,38 @@
+{%include "main.html" %}
+</head>
+<body style="background-color: black; color: white;">
+	{% include "header.html" %}
+	<div class="container content">
+		<div class="row" style="margin-top: 150px;">
+			<div class="col-md-8">
+				<h1 style="text-align: center;">{{category.name}}</h1>
+			</div>
+			<div class="col-md-4">
+				<a href="{{url_for('problemAdd', categories_id=category.id)}}">
+					<button type="submit" style="margin-top: 30px">
+						Add Problem
+					</button>
+				</a>
+			</div>
+		</div>
+		{% for i in problems %}
+		<div class="row" style="text-align: center; background-color: cyan; color: black; margin-left: 17%;
+		margin-right: 17%; margin-top: 25px;">
+			<div class="col-md-8" >
+				<h3>{{i.name}}</h3>
+			</div>
+			<div class="col-md-8" style="text-align: center;">
+				<h4>{{i.description}}</h4>
+			</div>
+			<div class="col-md-4" style="align-content: right;">
+				<a href="{{url_for('comments', categories_id=category.id, problems_id=i.id)}}">
+					<button type="submit">
+						Comments
+					</button>
+				</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</body>
+</html>

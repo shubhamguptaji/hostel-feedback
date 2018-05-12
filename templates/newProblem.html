@@ -1,0 +1,51 @@
+{% include "main.html" %}
+</head>
+<body style="background-color: black; color: white;">
+	{% include "header.html" %}
+	<div class="container content">
+		<div class="row" style="margin-top: 80px">
+			<div class="col-md-10">
+				<h1>New Problem</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<form action="#" method="post">
+					<div class="row" style="margin: 25px 25px 25px 25px;">
+						<div class="col-md-3" style="text-align: right;">
+							<label for="naam">Name:</label>
+						</div>
+						<div class="col-md-6">
+							<input type="text" maxlength="30" name="name" placeholder="Enter Problem name">
+						</div>
+					</div>
+					<div class="row" style="margin: 25px 25px 25px 25px;">
+						<div class="col-md-3"  style="text-align: right;">
+							<label for="desc">Description:</label>
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="description" placeholder="Enter Problem Description">
+						</div>
+					</div>
+					<div class="row" style="margin: 25px 25px 25px 25px;">
+						<div class="col-md-3" style="text-align: right;">
+							<label for="picture">Image:</label>
+						</div>
+						<div class="col-md-6">
+							<input type="text" name="image" placeholder="Enter image url">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4" style="text-align: right;">
+							<button type="submit" id="submit" style="color: black;">Create</button>
+						</div>
+						<div class="col-md-4" style="text-align: left;">
+							<a href="{{url_for('showProblem', categories_id=categories_id)}}">Cancel</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

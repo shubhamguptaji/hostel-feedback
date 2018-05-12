@@ -1,0 +1,17 @@
+<html>
+<body>
+<form id="mainForm" name="mainForm">
+    <input type="radio" name="rads" value="1" />
+    <input type="radio" name="rads" value="2" />
+    <input type="radio" name="rads" value="3" />
+    <input type="radio" name="rads" value="4" />
+</form>
+<span id="result"></span>
+<script>
+document.mainForm.onclick = function(){
+    var radVal = document.mainForm.rads.value;
+    result.innerHTML = 'You selected: '+radVal;
+}
+</script>
+</body>
+</html>

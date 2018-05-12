@@ -1,0 +1,64 @@
+    <table>
+       <tr>Warden and Other Staff Members</tr>
+       <form id="mainForm" name="mainForm">
+            <!-- <tr>
+                <td></td>
+                <td>Excellent</td>
+                <td>Very Good</td>
+                <td>Good</td>
+                <td>Average</td>
+                <td>Poor</td>
+            </tr> -->
+            <tr>
+                <td>1. Accessibility to Warden</td>
+                <td><input type="radio" name="rads" value="5" /></td>
+                <td><input type="radio" name="rads" value="4" /></td>
+                <td><input type="radio" name="rads" value="3" /></td>
+                <td><input type="radio" name="rads" value="2" /></td>
+                <td><input type="radio" name="rads" value="1" /></td>
+            </tr>
+        </form>
+            <!-- <tr>
+                <td>2. Accessibility to Hostel Commitee Members</td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>                
+            </tr>
+            <tr>
+                <td>3. Behaviour of Hostel Staff Members</td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>                
+            </tr>
+            <tr>
+                <td>4. Redressal of Problems</td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+            </tr>
+            <tr>
+                <td>5. Overall Rating</td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+                <td><input type="radio"></td>
+            </tr> -->
+        </table>
+
+        <span id="result"></span>
+        <script>
+             document.mainForm.onclick = function(){
+                var radVal = document.mainForm.rads.value;
+                result.innerHTML = 'You selected: '+radVal;
+                console.log(radval);
+            }
+        </script>
+    </body>
+</html>

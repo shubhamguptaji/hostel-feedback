@@ -1,0 +1,55 @@
+{% include "main.html" %}
+</head>
+<body>
+	{% include "header.html" %}
+
+	<script>
+		$(function(){
+			document.getElementById('btnbtn').value = 'Upvote';
+		})
+		function like() {
+			var btn = document.getElementById('btnbtn');
+			if(btn.value=='star') {
+				$.ajax({
+					method: 'PUT',
+					url: "{{ url_for('like', problem=problem) }}",
+					success: (response) => {
+						btn.value = 'unstar';
+						$('#star').text(` Unstar(${response})`);
+						btn.style.backgroundColor = '#fff';
+						btn.style.color = '#f0ad4e';
+						btn.style.borderColor = '#fff';
+						console.log("{{filename}}");
+						console.log(response);
+					}
+				});
+			}
+			else {
+				$.ajax({
+					method: 'DELETE',
+					url: "{{ url_for('like', problem=problem) }}",
+					success: (response) => {
+						btn.value = 'star';
+						$('#star').text(` Star(${response})`);
+						btn.style.backgroundColor = '#f0ad4e';
+						btn.style.color = '#fff';
+						btn.style.borderColor = '#f0ad4e';
+						console.log("{{filename}}");
+						console.log(response);
+					}
+				});
+			}
+		}
+		// var text = document.getElementById('link');
+		// var link = '';
+		// const dn = location.host;
+		// link += dn;
+		// link += "{{url_for('uploaded_file',filename=fdata.file_name)}}"
+		// text.value = link;
+		// function myFunction() {
+		// 	text.select();
+		// 	document.execCommand("Copy");
+		// 	document.getElementById("hello").innerText = "Link Copied!!";
+		// 	text.blur();
+		}
+	</script>
