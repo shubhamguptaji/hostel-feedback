@@ -1,0 +1,11 @@
+{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+<div class="row" style="margin: 0;">
+    <div class="col-md-12">
+        <div class='flash navbar navbar-default navbar-fixed-bottom navbar-inverse flashM'>
+            <div class="navbar-header left-p">
+                <div class="navbar-brand" style="color:white">{{ message }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %} {% endif %} {% endwith %}

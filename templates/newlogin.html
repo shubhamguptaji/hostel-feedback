@@ -86,9 +86,10 @@ box-shadow: none;
 </style>
 </head>
 <body>
-  <div class="main_logo">
-    <img src="https://punjab.chitkara.edu.in/Interface/Dashboard/cu_logo.png">
-  </div>
+    {% include "flash.html" %}
+    <div class="main_logo">
+        <img src="https://punjab.chitkara.edu.in/Interface/Dashboard/cu_logo.png">
+    </div>
 <form action="/login" method="POST">
     <div class="login">
         <div class="login-screen">
@@ -113,5 +114,6 @@ box-shadow: none;
         </div>
     </div>
 </form>
+<a href="{{url_for('newUser')}}"><button type="submit" class="btn btn-primary btn-large btn-block" >Sign up</button></a>
 </body>
 </html>
